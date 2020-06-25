@@ -1,0 +1,30 @@
+$social-size: 32px;
+$social-border: 0px;
+
+.social {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+
+
+    &__item {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    &__link {
+        color: $body-color;
+        text-decoration: none;
+        font-size: 1.5em;
+        width: $social-size;
+        height: $social-size;
+        line-height: calc(#{$social-size} - 2 * #{$social-border});
+        border: $social-border solid $light-gray;
+        border-radius: 50%;
+        
+        @include tr;
+        @include hover {
+            color: $primary-color;
+        }
+    }
+}
